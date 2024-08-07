@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <h1>Registration Information</h1>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 20px;
+        }
+        .form-container {
+            max-width: 800px;
+            margin: auto;
+            background:gray;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 10px;
+            vertical-align: top;
+        }
+        td:first-child {
+            width: 30%;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="date"], input[type="email"], input[type="number"], select, textarea, input[type="file"] {
+            width: calc(100% - 20px);
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        textarea {
+            resize: vertical;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #172018;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #a04551;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <form action="/submit_registration" method="post" enctype="multipart/form-data">
+
+        <table>
+            <tr>
+                <td>Full Name:</td>
+                <td><input type="text" name="full_name" required></td>
+            </tr>
+            <tr>
+                <td>Date of Birth:</td>
+                <td><input type="date" name="dob" required></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <select name="gender" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Contry:</td>
+                <td><select name="" id="">
+                    <option value="" selected hidden>select your country</option>
+                    <option value="india">india</option>
+                    <option value="afganistan">afganistan</option>
+                    <option value="nepal">nepal</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td><textarea name="address" rows="3" required></textarea></td>
+            </tr>
+            <tr>
+                <td>Contact Number:</td>
+                <td><input type="text" name="contact_number" required></td>
+            </tr>
+            <tr>
+                <td>Email Address:</td>
+                <td><input type="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td>Photo Upload:</td>
+                <td><input type="file" name="photo" accept="image/*"></td>
+            </tr>
+     
+        <table>
+                <td>Relationship:</td>
+                <td><input type="text" name="relationship" required></td>
+          
+        </table>
+
+        <table>
+            <tr>
+                <td>Previous Academic Certificates:</td>
+                <td><input type="file" name="academic_certificates" accept=".pdf,.jpg,.jpeg,.png" multiple></td>
+            </tr>
+            <tr>
+                <td>ID Proof:</td>
+                <td><input type="file" name="id_proof" accept=".pdf,.jpg,.jpeg,.png"></td>
+            </tr>
+            <tr>
+                <td>Any Other Relevant Documents:</td>
+                <td><input type="file" name="additional_documents" accept=".pdf,.jpg,.jpeg,.png"></td>
+            </tr>
+            <tr>
+                <td>Applicant's Signature (Type Name):</td>
+                <td><input type="text" name="signature" required></td>
+            </tr>
+            <tr>
+                <td>Date:</td>
+                <td><input type="date" name="date" required></td>
+            </tr>
+        </table>
+
+        <button type="submit">Submit Registration</button>
+    </form>
+</div>
+
+</body>
+</html>
